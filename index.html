@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Error</title>
+</head>
+
+<body>
+    <pre>Error: Cannot use GraphQLSchema &quot;[object Object]&quot; from another module or realm.<br><br>Ensure that there is only one instance of &quot;graphql&quot; in the node_modules<br>directory. If different versions of &quot;graphql&quot; are the dependencies of other<br>relied on modules, use &quot;resolutions&quot; to ensure only one version is installed.<br><br>https://yarnpkg.com/en/docs/selective-version-resolutions<br><br>Duplicate &quot;graphql&quot; modules cannot be used at the same time since different<br>versions may have different capabilities and behavior. The data from one<br>version used in the function from another could produce confusing and<br>spurious results.<br> &nbsp; &nbsp;at instanceOf (D:\2018\apollo\node_modules\apollo-server-express\node_modules\apollo-server-core\node_modules\graphql\jsutils\instanceOf.js:17:13)<br> &nbsp; &nbsp;at isSchema (D:\2018\apollo\node_modules\apollo-server-express\node_modules\apollo-server-core\node_modules\graphql\type\schema.js:48:35)<br> &nbsp; &nbsp;at validateSchema (D:\2018\apollo\node_modules\apollo-server-express\node_modules\apollo-server-core\node_modules\graphql\type\validate.js:51:25)<br> &nbsp; &nbsp;at assertValidSchema (D:\2018\apollo\node_modules\apollo-server-express\node_modules\apollo-server-core\node_modules\graphql\type\validate.js:76:16)<br> &nbsp; &nbsp;at Object.validate (D:\2018\apollo\node_modules\apollo-server-express\node_modules\apollo-server-core\node_modules\graphql\validation\validate.js:61:35)<br> &nbsp; &nbsp;at doRunQuery (D:\2018\apollo\node_modules\apollo-server-express\node_modules\apollo-server-core\dist\runQuery.js:88:38)<br> &nbsp; &nbsp;at D:\2018\apollo\node_modules\apollo-server-express\node_modules\apollo-server-core\dist\runQuery.js:22:54<br> &nbsp; &nbsp;at &lt;anonymous&gt;<br> &nbsp; &nbsp;at process._tickCallback (internal/process/next_tick.js:188:7)</pre>
+</body>
+
+</html>
