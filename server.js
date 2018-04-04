@@ -27,7 +27,7 @@ const typeDefs = `
 
   # the schema allows the following query:
   type Query {
-    posts(id:Int): [Post]
+    posts: [Post]
     author(id: Int!): Author
   }
 
@@ -54,7 +54,7 @@ const posts = [
 
 const resolvers = {
   Query: {
-    posts: (_, { id }) => (id ? filter(posts, { id }) : posts),
+    posts: () => posts,
     author: (_, { id }) => find(authors, { id: id })
   },
   Mutation: {
@@ -71,7 +71,6 @@ const resolvers = {
     posts: author => filter(posts, { authorId: author.id })
   },
   Post: {
-    // author: post => find(authors, { id: post.authorId })
     author: post => find(authors, { id: post.authorId })
   }
 };
@@ -94,6 +93,8 @@ app.use(
    * apollo服务器接受一个graphqloptions对象作为其单个参数
    */
   graphqlExpress(req => {
+    console.log(req.body);
+
     return {
       schema,
       context: {
@@ -132,3 +133,4 @@ engine.listen(
 // app.listen(3000, () => {
 //   console.log("Go to http://localhost:3000/graphiql to run queries!");
 // });
+
